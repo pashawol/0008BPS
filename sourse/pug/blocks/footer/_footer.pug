@@ -1,4 +1,13 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.col.col-lg-auto © 2020. Время первых
+				+e.col.col-lg-auto
+					+e.link(href="https://kontur.ru/about/policy" target="_blank") Политика конфиденциальности
+				+e.col.col-xl-auto.col
+					+e.link(href="https://auth.kontur.ru/?back=https://info.kontur.ru/documents/1ecd360a-5608-4020-aff1-e5dfb2825c48"  target="_blank") Договор на оказание услуг по проведению семинаров/вебинаров
+				+e.col.col-lg-auto
+					+e.mail(href="mailto:manakova@skbkontur.ru")
+						+icon("mail")
+						| manakova@skbkontur.ru

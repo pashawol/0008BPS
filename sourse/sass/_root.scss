@@ -1,24 +1,22 @@
 :root {
+	
 	--animate-delay: 1.2s;
 	--fontSizeBase: #{$em-base};
 	@include media-breakpoint-up(md) {
-
 		--sPT: #{rem(80)};
 		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+		--sTPB: #{rem(55)};
+		
 	}
-
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
-
-
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
-	
+	--sPT: #{rem(80 * .7)};
+	--sPB: #{rem(90 * .7)};
+	--sTPB: #{rem(55 * .7)};
+ 
+	@include media-breakpoint-up(md) { 
+		--topSpacing: #{ rem(45)};
+	}
+	--topSpacing: #{ rem(30)};
+	--swiperArrowPosition: 0;
 }
 
 @include media-breakpoint-up(xl) {}

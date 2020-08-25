@@ -1,7 +1,26 @@
 .form-wrap{
+	&--border{
+		border: 1px solid #3D68FF;
+		box-sizing: border-box;
+		border-radius: 20px;
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(40);
+		}
+		padding: rem(30) rem(15);
+		margin-bottom: 30px;
+		.btn-primary{
+			width: rem(160);
+		}
+	}
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(28);
+		}
+		&__title{
+			opacity: 0.5;
+			margin-bottom: rem(10);
+			display: inline-block;
 		}
 		&__input{
 			// @extend .form-control;

@@ -1,7 +1,39 @@
+.main-page{
+	.footer{
+
+		background-color: rgba($color: #fff, $alpha: .1);
+		color: #ffffff;
+			a{
+				color: #ffffff;
+			}
+	}
+}
 .footer {
-		
-
-
+		// background-color: rgba($color: #fff, $alpha: 1);
+		background-color: #ffffff;
+	padding-top: rem(54);
+	padding-bottom: rem(39);
+	.row{
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__col{
+		padding-bottom: rem(15);
+	}
+	&__link{
+		font-size: rem(12);
+		border-bottom: 1px solid ;
+		&:hover{
+			border-color: transparent;
+		}
+	}
+	.icon{
+		font-size: rem(18);
+		margin-right: rem(13);
+	}
+	&__mail{
+		color: $body-color;
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

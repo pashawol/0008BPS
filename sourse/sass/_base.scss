@@ -32,6 +32,10 @@ html {
 
 .section-title { 
 	padding-bottom: var(--sTPB);
+	position: relative;
+	h2{
+		letter-spacing: 0.04em;
+	}
 }
 
 body {
@@ -127,44 +131,7 @@ body {
 	color: #98C3D1;
 }
 
-.slick-slide {
-	outline: 0 !important;
-}
-
-.slick-arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 2;
-	cursor: pointer;
-
-	i {
-		line-height: 1;
-
-	}
-
-	cursor: pointer;
-
-	&.l {
-		left: 0;
-
-		svg {
-			@include transform(rotateY(180deg));
-		}
-	}
-
-	&.r {
-		right: 0;
-
-	}
-
-	svg {
-		width: 17px;
-		height: auto;
-	}
-}
-
-
+ 
 .strong {
 	font-weight: bold;
 }
@@ -272,8 +239,16 @@ input::-webkit-inner-spin-button {
 }
 
 .swiper-button-hand {
-	width: var(--swiperArrowSize);
-	height: var(--swiperArrowSize);
+	color: #fff; 
+	width:1em;
+	height: 2em;
+	font-size: rem(18);
+	.icon{
+		fill:transparent;
+		stroke: currentColor;
+		font-size: 2em;
+		stroke-width: 2px;
+	}
 	border-radius: 50%;
 	background-color: var(--swiperBgDef);
 	border: 2px solid var(--swiperBorderColorDef);
@@ -284,21 +259,7 @@ input::-webkit-inner-spin-button {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	color: var(--swiperColorDef);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
-	margin-top: calc(-1 * var(--swiperArrowSize) * 0.4);
-	@include mt;
-
-	&:hover {
-		background-color: $primary;
-		border-color: $primary;
-		color: var(--swiperBgDef);
-	}
-
-	.icon {
-		font-size: rem(12);
-	}
-
+	@include mt; 
 	&::after {
 		display: none;
 	}
@@ -410,4 +371,39 @@ img.img-bg,
 
 iframe {
 	border: none;
+}
+ 
+
+.bg-grad{
+	background: linear-gradient(360deg, #3D68FF 0%, rgba(61, 104, 255, 0) 68.03%);
+}
+
+.page-title{
+	padding-bottom: rem(15);
+	&__link{
+		color: $primary;
+		display: inline-block;
+		.icon{
+			// fill: $primary;
+			// c$pr
+			// stroke: $primary;
+			// stroke-width: 3px;
+			font-size: rem(20);
+
+		}
+	}
+	h1{
+		font-weight: 900;
+		@include rfs(30px);
+		text-transform: uppercase;
+		font-weight: 900;
+		color: $primary;
+	}
+}
+
+.sLogin{
+	--sPT: #{rem(45)};
+	.btn{
+		width: rem(160);
+	}
 }

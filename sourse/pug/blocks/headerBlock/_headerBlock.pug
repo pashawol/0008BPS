@@ -1,10 +1,28 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.bg-wrap#headerBlock&attributes(attributes)
+		+pic("head-bg",'bg')(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				+e.col.col-xl-auto.col-sm.col-6
+					img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
+				+e.col.col-xl-auto.col-sm.col-6.order-sm-last
+					img.res-i(src="img/svg/logo-2.svg" loading="lazy", alt="")
+				+e.col.col-auto
+					+e.date 17–18 сентября
+					+e.footer
+						+e.label Online-only
+						+e.text семинар
+			+e.video.bg-wrap(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+				+pic("video.jpg",'bg')(class="picture-bg")
+				+e.play
+			+e.text-block
+				.row.align-items-center
+					.col
+						+e.title-sm Конкурс Индустриальные технологии
+						+e.text-sm Startup Village Livestream’20 станет виртуальным событием и главным бесплатным техноло гическим мероприятием 
+						+e.date-sm 18.08.2020 14:30
+					.col-auto
+						+e.btn-wrap
+							+e.btn(href="#") LIVE
 	// end headerBlock

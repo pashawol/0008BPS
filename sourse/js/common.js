@@ -1,8 +1,8 @@
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".nav-wrap"),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".nav-wrap ul li a")),
 
 	modalCall() {
 
@@ -63,7 +63,7 @@ const JSCCommon = {
 				element.addEventListener('click', () => {
 					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
 					this.menuMobile.classList.toggle("active");
-					document.body.classList.toggle("fixed");
+					// document.body.classList.toggle("fixed");
 					return false;
 				});
 			});
@@ -76,19 +76,19 @@ const JSCCommon = {
 				element.classList.remove("on");
 			});
 			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
+			// document.body.classList.remove("fixed");
 		}
 
 	},
 	mobileMenu() {
 		if (this.menuMobileLink) {
 			this.toggleMenu();
-			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					this.closeMenu();
-				}
-			}, { passive: true });
+			// document.addEventListener('mouseup', (event) => {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		this.closeMenu();
+			// 	}
+			// }, { passive: true });
 
 			window.addEventListener('resize', () => {
 				if (window.matchMedia("(min-width: 992px)").matches) {
@@ -146,74 +146,8 @@ const JSCCommon = {
 
 		}
 	},
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$("form").submit(function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				});
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
-	},
-	heightwindow() {
-		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		let vh = window.innerHeight * 0.01;
-		// Then we set the value in the --vh custom property to the root of the document
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-		// We listen to the resize event
-		window.addEventListener('resize', () => {
-			// We execute the same script as before
-			let vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		}, { passive: true });
-	},
-	animateScroll() {
-		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
-			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
-
-			$('html, body').animate({ scrollTop: destination }, 1100);
-
-			return false;
-		});
-	}
+ 
+ 
 };
 const $ = jQuery;
 
@@ -222,33 +156,21 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.ifie();
-	JSCCommon.sendForm();
-	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
+	JSCCommon.ifie(); 
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
+	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
-	screenName
-		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
-		: '';
+	screenName = '02.jpg';
+	if (screenName && x === "localhost:3000") {
+		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	}
 	// /добавляет подложку для pixel perfect
 
 
 	function whenResize() {
-
-		const topH = document.querySelector('header').scrollHeight;
-		let stickyElement = document.querySelector('.top-nav')
-		window.onscroll = () => {
-			if ($(window).scrollTop() > topH) {
-
-				stickyElement.classList.add('fixed');
-			} else {
-				stickyElement.classList.remove('fixed');
-			}
-		};
+ 
 
 	}
 
@@ -264,22 +186,23 @@ function eventHandler() {
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true,
+			loadPrevNextAmount: 4,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
+		
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+		// navigation: {
+		// 	nextEl: '.swiper-button-next',
+		// 	prevEl: '.swiper-button-prev',
+		// },
+		// pagination: {
+		// 	el: ' .swiper-pagination',
+		// 	type: 'bullets',
+		// 	clickable: true,
+		// 	// renderBullet: function (index, className) {
+		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+		// 	// }
+		// },
 	}
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
@@ -292,8 +215,64 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 
+	}); 
+	const swiper5 = new Swiper('.sProgram__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView:'auto',
+		spaceBetween: 30,
+		// freeMode: true, 
+		navigation: {
+			nextEl: '.sProgram .swiper-button-next',
+			prevEl: '.sProgram .swiper-button-prev',
+		},
+		breakpoints: { 
+			576: {
+				slidesPerView: 2
+			}, 
+			992: {
+				slidesPerView: 3 
+			},
+			1200: {
+				slidesPerView: 3, 
+				spaceBetween: 39,
+			}
+		},
 	});
-	// modal window
+	
+
+	var swiper6 = new Swiper('.sPerson__slider--js', {
+		...defaultSl,
+		effect: 'coverflow',
+		spaceBetween: 30,
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		coverflowEffect: {
+			rotate: 0,
+			stretch: 0,
+			depth: 350,
+			modifier: 1,
+			slideShadows: false,
+		},
+			navigation: {
+			nextEl: '.sPerson .swiper-button-next',
+			prevEl: '.sPerson .swiper-button-prev',
+		},
+		breakpoints: {
+			 
+			1200: {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -160,
+					depth: 450,
+					modifier: 1,
+					slideShadows: false,
+				},
+			}
+		},
+	});
 
 };
 if (document.readyState !== 'loading') {

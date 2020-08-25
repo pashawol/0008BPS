@@ -1,66 +1,183 @@
-.top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
+.main-page {
+	.toggle-menu-mobile {
+		 
+		color: #fff;
+}
+}
+.main-page .top-nav{
 	left: 0;
 	width: 100%;
+	top: 0;
+	// position: absolute;
 
+	 &__user { 
+		 color: #ffffff;
+	 }
+	 .navMenu { 
+	 	&__link {
+			 @include media-breakpoint-up(sm) {
+
+				 color: #ffffff;
+				}
+		 }}
+	&__logo { 
+			.logo-fill {
+				fill: #fff !important;
+			}
+
+			.logo-strock {
+				stroke: #fff !important;
+			} 
+		}
+		&__user { 
+			color: #ffffff; 
+			&:hover {
+				color: $primary !important;
+			} 
+		}
+}
+.top-nav {
+		 
+		padding-top: var(--topSpacing);
+		padding-bottom: var(--topSpacing);
+		position: relative;
+		z-index: 5;
+		&__logo {
+			@include mt;
+			.logo-fill,
+			.logo-strock,
+			 svg{
+				 @include mt;
+			 }
+			 .logo-fill {
+			 	fill: $primary !important;
+			 }
+
+			 .logo-strock {
+			 	stroke: $primary !important;
+			 }
+			 &:hover{
+				 .logo-fill{
+					 fill: $primary !important; 
+				 }
+				 .logo-strock{
+					 stroke: $primary !important;
+				 }
+			 }
+		}
 	&.fixed {
 		width: 100vw;
 		bottom: auto;
 		margin-top: 0;
 		background-color: #fff;
 	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
+	.row{
+		align-items: center;
+	}
+	@include media-breakpoint-up(lg){
+	&__logo{ 
+		margin-right: rem(40);
+	}
+}
+	&__user{
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid ;
+		// color: #ffffff;
+		&:hover{
+			color: $primary !important;
+		}
+		.icon{
+			font-size: rem(22);
+		}
 	}
 
-	&__item {
-		display: inline-block;
-		list-style-type: none;
+	&__col {
+		position: relative;
 	}
-
 	// 
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}
-
+	
 	@include media-breakpoint-up(sm) {}
-
+	
 	@include media-breakpoint-up(xs) {}
-
-	// 
-	@include media-breakpoint-between(md, xl) {}
-
-	// 
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
+	
+	
 	// 
 	@include media-breakpoint-down(xl) {}
-
+	
 	@include media-breakpoint-down(lg) {}
-
+	
 	@include media-breakpoint-down(md) {}
-
+	
 	@include media-breakpoint-down(sm) {}
-
+	
 	@include media-breakpoint-down(xs) {}
+}
+	
+.nav-wrap{
+	@include media-breakpoint-up(md) {
+		display: block !important;
+		position: relative;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	padding-left: 15px;
+	padding-right: 15px;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+
+	&.active{
+		display: block;
+	}
+	@include media-breakpoint-down(sm) {
+		background-color: #fff;
+	 padding: rem(30) 0;
+	}
+}
+
+.navMenu{
+		@include media-breakpoint-up(sm) {
+
+			display: flex;
+			list-style: none;
+			align-items: center;
+		}
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			@include roww(rem(54));
+		}
+		@include media-breakpoint-up(md) {
+			justify-content: start;
+		}
+		justify-content: flex-end;
+		@include roww(rem(30));
+	align-items: center;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	&__link{ 
+		color: $body-color;
+		font-size: rem(14);
+		display: inline-block;
+			@include media-breakpoint-up(sm){
+				margin-bottom: 0;
+			}
+			margin-bottom: 1rem;
+		&.active,
+		&:hover{
+			color: $primary !important;
+		}
+	}
 }
