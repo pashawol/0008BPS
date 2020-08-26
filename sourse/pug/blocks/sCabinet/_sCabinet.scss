@@ -1,0 +1,127 @@
+
+	// start .sCabinet
+	.sCabinet {
+		padding-top: rem(13);
+		padding-bottom: rem(53);
+		&__aside{
+			
+				@include media-breakpoint-up(sm){
+
+					padding: rem(30);
+				}
+				padding: rem(20);
+			border-radius: 27px;
+			background-color: #ffffff; 
+			margin-bottom: 30px;
+				@include media-breakpoint-up(xl) {
+					display: block;
+				}
+				@include media-breakpoint-up(sm){
+					display: flex;
+				}
+				picture{
+					flex: 0 0 auto;
+				@include media-breakpoint-down(xl) {
+					margin-right: 20px;
+					margin-bottom: 0;
+				}
+					@include media-breakpoint-up(sm) {
+
+						margin-bottom: rem(33);
+						min-width: 150px;
+					}
+					@include block(197, 232);
+					position: relative;
+					border-radius: 20px;
+					overflow: hidden;
+					// width: 100px;
+					img{
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+					@include media-breakpoint-down(sm){
+						margin-bottom: rem(23);
+						margin-right: 0;
+					}
+			}
+		}
+		&__main{
+			@include media-breakpoint-up(sm){
+
+				padding: rem(30) rem(34);
+			}
+			padding: rem(20);
+			background-color: #ffffff;
+			border-radius: 27px;
+
+		}
+		&__main-head{
+			padding-bottom: rem(7);
+			.h5{
+				text-transform: uppercase;
+				font-weight: 900;
+			}
+		}
+		&__edit-btn{
+			font-size: $small;
+			display: inline-flex;
+			align-items: center;
+			
+			.icon{
+				font-size: rem(24);
+				margin-right: rem(14);
+			}
+		}
+		&__input-wrap{
+			// display: block;
+			display: flex;
+			margin-bottom: 0; 
+			&:not(:last-child){
+				border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+			}
+		 
+		}
+		&__input{
+			border-radius: 0;
+			font-size: rem(20);
+			color: #000000;
+			opacity: 1;
+			background: none !important;
+			&.edit{
+				border-color: rgba($color: #000000, $alpha: .1);
+			}
+		}
+		.input-title {
+			display: block;
+			width: 48%;
+			padding-top: rem(20);
+			font-size: $small;
+			// min-height: 1px;
+			// padding-top: rem(10);
+			// padding-bottom: rem(8);
+		}
+	 
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sCabinet

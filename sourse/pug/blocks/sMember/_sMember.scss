@@ -53,43 +53,9 @@
 			letter-spacing: 0.04em;
 			margin-bottom: rem(22);
 		}
-			&__star {
-				color: $primary;
-				margin-bottom: rem(10);
 
-				.icon {
-					stroke: currentColor;
-					fill: transparent;
-					font-size: rem(32);
-					@include mt;
-				}
-
-				&:hover,
-				&.active {
-					.icon {
-						fill: currentColor;
-					}
-				}
-			}
-			&__block{
-				padding: rem(15) rem(25); 
-				background-color: #ffffff;
-				margin-bottom: rem(17);
-				box-shadow: 0px 53.6471px 67px -11.6235px rgba(0, 0, 0, 0.21);
-				border-radius: 20px;
-				max-width: rem(860);
-				.row{
-					align-items: center;
-					@include media-breakpoint-up(xl) {
-
-						@include roww(50px);
-					}
-				}
-			}
-			&__time{
-				@include rfs(19px);
-				opacity: 0.5;
-			}
+		 
+		
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -112,3 +78,42 @@
 	@include media-breakpoint-down(sm) {}
 
 } // end.sMember
+
+.panel-block{
+	background-color: #ffffff;
+	margin-bottom: rem(17);
+	box-shadow: 0px 53.6471px 67px -11.6235px rgba(0, 0, 0, 0.21);
+	border-radius: 20px;
+	max-width: rem(860); 
+	padding: rem(15) rem(26);
+	.row {
+		align-items: center;
+
+		@include media-breakpoint-up(xl) {
+
+			@include roww(50px);
+		}
+	}
+	&__time {
+		@include rfs(19px);
+		opacity: 0.5;
+	}
+				&__star {
+					color: $primary;
+					margin-bottom: rem(10);
+
+					.icon {
+						stroke: currentColor;
+						fill: transparent;
+						font-size: rem(32);
+						@include mt;
+					}
+
+					&:hover,
+					&.active {
+						.icon {
+							fill: currentColor;
+						}
+					}
+				}
+}

@@ -99,6 +99,12 @@
 	&__col {
 		position: relative;
 	}
+
+
+	&__cabinet{
+		display: flex;
+		align-items: center;
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -179,5 +185,40 @@
 		&:hover{
 			color: $primary !important;
 		}
+	}
+}
+
+.user-block{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: rem(20);
+	&__caption{
+		margin-right: rem(21);
+		@include media-breakpoint-up(lg) {
+
+			display: block;
+		}
+		display: none;
+		text-align: right;
+	}
+	&__name{
+		font-size: $small;
+		font-weight: bold;
+		display: block;
+	}
+	&__text{
+		font-size: rem(11);
+		display: block;
+		color: #000000; 
+		opacity: 0.5;
+	}
+	picture{
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+		border: 3px solid $primary;
 	}
 }
