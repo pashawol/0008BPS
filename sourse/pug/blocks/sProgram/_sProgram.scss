@@ -17,8 +17,8 @@
 			// opacity: 0;
 		}
 		&__slide{
-			max-width: 100%;
-			width: rem(360);
+			// max-width: 100%;
+			// width: rem(360);
 			@include mt;
 			&:hover {
 
@@ -130,6 +130,13 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		&__slider{
+			overflow: inherit;
+			max-width: 320px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 
 } // end.sProgram

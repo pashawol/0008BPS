@@ -210,8 +210,8 @@ function eventHandler() {
 		freeModeMomentum: true
 	}));
 	var swiper5 = new Swiper('.sProgram__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		spaceBetween: 30,
+		slidesPerView: 1,
+		spaceBetween: 20,
 		// freeMode: true, 
 		navigation: {
 			nextEl: '.sProgram .swiper-button-next',
@@ -219,6 +219,7 @@ function eventHandler() {
 		},
 		breakpoints: {
 			576: {
+				spaceBetween: 30,
 				slidesPerView: 2
 			},
 			992: {
