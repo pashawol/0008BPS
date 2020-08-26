@@ -1,0 +1,101 @@
+	// start .sNetworkingRules
+.sNetworkingRules {
+
+	padding-top: 31px;
+	padding-bottom: 32px;
+
+	&__col:nth-child(1) &__item{
+		background: radial-gradient(35.45% 61% at 95.83% 93.02%, #F7625D 0%, rgba(247, 98, 93, 0) 100%), radial-gradient(43.66% 67.78% at 41.94% 3.6%, #F7625D 0%, rgba(247, 98, 93, 0) 100%), #3D68FF;
+	}
+
+	&__col:nth-child(2) &__item{
+		background: radial-gradient(72.64% 131.3% at 12.36% 22.52%, #F7625D 0%, rgba(247, 98, 93, 0) 100%), radial-gradient(19.82% 28.83% at 91.39% 95.95%, #F7625D 0%, rgba(247, 98, 93, 0) 100%), #3D68FF;
+	}
+
+	&__col:nth-child(3) &__item{
+		background: radial-gradient(46.25% 83.6% at 38.75% 100%, #F7625D 0%, rgba(247, 98, 93, 0) 100%), radial-gradient(37% 53.83% at 93.06% 13.29%, #F7625D 0%, rgba(247, 98, 93, 0) 100%), #3D68FF;
+	}
+
+
+	&__item{
+		display: flex;
+		align-items: flex-end;
+		min-height: 222px ;
+		border-radius: 20px;
+		padding-left: 27px;
+		padding-bottom: 25px;
+		box-shadow: 0px 53.6471px 67px -11.6235px rgba(0, 0, 0, 0.21);
+		font-weight: 900;
+		@include media-breakpoint-up(xl) {
+			font-size: 30px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 23px;
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: 20px;
+		}
+		line-height: (40 / 30);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	h3{
+		font-weight: 500;
+		letter-spacing: 0.04em;
+		color: #3D68FF;
+		margin-top: 63px;
+		margin-bottom: 30px;
+	}
+
+	p{
+		line-height: (24 / 16);
+		margin-bottom: 32px;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li{
+		opacity: 0.7;
+		position: relative;
+		padding-left: 22px;
+		padding-bottom: 10px;
+	}
+
+	li::before {
+		content: "";
+		height: 8px;
+    width: 8px;
+		background-color: #3D68FF;
+    border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 6px;
+	}
+
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sNetworkingRules
