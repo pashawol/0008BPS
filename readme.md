@@ -10,3 +10,5 @@
 1. <https://pashawol.github.io/0008BPS/public/08-networking.html>
 1. <https://pashawol.github.io/0008BPS/public/09-cabinet.html>
 1. <https://pashawol.github.io/0008BPS/public/09-cabinet-2.html>
+1. <https://pashawol.github.io/0008BPS/public/09-cabinet-3.html>
+1. <https://pashawol.github.io/0008BPS/public/09-cabinet-4.html>
