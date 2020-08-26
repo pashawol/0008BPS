@@ -1,0 +1,62 @@
+	// start .sEvents
+.sEvents {
+	
+
+	padding-top: 20px;
+	padding-bottom: 52px;
+
+	&__item{
+		background-color: $white;
+		margin-bottom: 17px;
+		box-shadow: 0px 53.6471px 67px -11.6235px rgba(0, 0, 0, 0.21);
+		border-radius: 20px;
+		padding: 27px 26px 18px;
+	}
+
+	&__time{
+		font-size: 19px;
+		line-height: (30 / 19);
+		opacity: 0.5;
+		// width: 130px;
+		margin-right: 21px;
+	}
+
+	&__star{
+		color: $primary;
+		margin-bottom: rem(10);
+		.icon{
+			stroke: currentColor;
+			fill:transparent;
+			font-size: rem(35); 
+			@include mt;
+		}
+			&:hover,
+			&.active {
+				.icon {
+					fill: currentColor;
+				}
+			}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sEvents
