@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sPerson/_sPerson.pug
+include ../blocks/sMember/_sMember.pug
+include ../blocks/sCabinet/_sCabinet.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav('l')
+	+page-title()
+
+	//- .container
+	//- 	+b.page-title--lines
+	//- 		.row.align-items-center
+	//- 			.col-auto
+	//- 				+e.link(href="#")
+	//- 					+icon("arrow-back")
+	//- 			.col-auto
+	//- 				ul
+	//- 					li: a(href="#") Профиль
+	//- 					li: a(href="#") Мое расписание
+	//- 					li: a.active(href="#") Чаты
+	+sCabinet
+	//- +sChat
+	+sContact()
+	+footer()
+
+
+	

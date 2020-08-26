@@ -1,0 +1,19 @@
+mixin sChat()
+	// start sChat
+	+b.SECTION.sChat.section#sChat&attributes(attributes)
+		.container
+			mixin item()
+				+e.item(href="#")
+					.row
+						+e.DIV.img-wrap.col-auto
+							+pic("teamPers-4",'bg',0)
+						+e.DIV.name.col-sm-auto Вячеслав <br> Чморшанский
+						+e.DIV.time.col-sm-auto 15:50
+						.col
+							+e.DIV.caption.small Последнее сообщение в несколько строк для наглядности со сокращением
+					block
+			+item()
+				+e.DIV.number 3
+			+item()
+			+item()
+	// end sChat
