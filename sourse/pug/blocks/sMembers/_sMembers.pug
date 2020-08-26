@@ -1,0 +1,52 @@
+mixin sMembers()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container
+			+e.filter
+				.row
+					+e.col.col-xl-auto
+						+b.search-block
+							+input('Поиск по участникам')
+							+e.btn(type="submit")
+								+icon('search')
+					+e.col-toggle.col-md.d-lg-block
+						+input("Не выбрано",'select','Должность')
+					+e.col-toggle.col-md.d-lg-block
+						+input("Не выбрано",'select','Компания')
+					+e.col-toggle.col-md.d-lg-block
+						+input("Не выбрано",'select','Город') 
+				+e.toggle.d-lg-none
+					span.show Больше фильтров
+					span.hide Скрыть
+			.row
+				mixin item(i,t)
+					.col-xl-3.col-lg-4.col-sm-6
+						+e.item
+							+e.img-wrap.bg-wrap(href="#")
+								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+								+e.DIV.btn
+									+e.DIV.icon-wrap
+										+icon("comment")
+									+e.DIV.btn-text Написать <br> сообщение
+							+e.DIV.title
+								a(href="#")= t
+							+e.DIV.text Управляющий партнер
+								br
+								| ООО “Моршанский
+								br
+								| банк”
+					// /.col-xl-3.col-lg-4.col-sm-6
+				+item('1','Виктория Моршанская')
+				+item('2','Виктор Моршанский')
+				+item('3','Виктория Моршанская')
+				+item('4','Виктор Моршанский')
+				+item('5','Виктор Моршанский')
+				+item('6','Виктор Моршанский')
+				+item('7','Виктор Моршанский')
+				+item('8','Виктор Моршанский')
+				+item('9','Виктория Моршанская')
+				+item('10','Виктория Моршанская')
+				+item('11','Виктория Моршанская')
+				+item('12','Виктория Моршанская')
+			+pugin()
+	// end sMembers

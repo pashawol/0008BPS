@@ -1,3 +1,11 @@
+.form-group{
+margin-bottom: rem(28);
+}
+.input-title{
+opacity: 0.5;
+margin-bottom: rem(6);
+display: inline-block;
+}
 .form-wrap{
 	&--border{
 		border: 1px solid #3D68FF;
@@ -14,13 +22,10 @@
 		}
 	}
  	&__input-wrap{
-			// @extend .form-group;
-			margin-bottom: rem(28);
+			// @extend 
 		}
 		&__title{
-			opacity: 0.5;
-			margin-bottom: rem(10);
-			display: inline-block;
+			
 		}
 		&__input{
 			// @extend .form-control;
@@ -30,12 +35,13 @@
  	&__btn{
  		cursor: pointer;
  	}
- 	label{
- 		width: 100%;
- 		display: block;
- 	}
 }
-
+.form-group{
+	
+	label{ 
+		display: block;
+	}
+}
 
 .parsley-error{
 	border-image: none;

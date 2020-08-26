@@ -16,14 +16,7 @@ block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-nav()
-	+b.page-title
-		.container
-			.row
-				.col-auto
-					+e.link(href="#")
-						+icon("arrow-back")
-				.col
-					h1= title
+	+page-title(title)
 	+b.sLogin.section
 		.container
 			.row

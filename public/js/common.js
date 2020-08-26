@@ -165,7 +165,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '04.jpg';
+	screenName = '06.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -261,6 +261,14 @@ function eventHandler() {
 
 	$("div#dropzone").dropzone({
 		url: "/file-upload"
+	});
+	var toggleBtn = document.querySelector('.sMembers__toggle');
+	toggleBtn.addEventListener('click', function () {
+		var toggleBlock = document.querySelectorAll(".sMembers__col-toggle");
+		this.classList.toggle('active');
+		toggleBlock.forEach(function (el) {
+			el.classList.toggle('active');
+		});
 	});
 }
 

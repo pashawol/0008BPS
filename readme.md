@@ -4,3 +4,5 @@
 1. <https://pashawol.github.io/0008BPS/public/02-login-2.html>
 1. <https://pashawol.github.io/0008BPS/public/03-registration.html>
 1. <https://pashawol.github.io/0008BPS/public/04-program.html>
+1. <https://pashawol.github.io/0008BPS/public/06-members.html>
+1. <https://pashawol.github.io/0008BPS/public/07-member.html>
