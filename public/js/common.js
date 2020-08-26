@@ -165,7 +165,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '07.jpg';
+	screenName = '08.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -263,13 +263,27 @@ function eventHandler() {
 		url: "/file-upload"
 	});
 	var toggleBtn = document.querySelector('.sMembers__toggle');
-	toggleBtn.addEventListener('click', function () {
-		var toggleBlock = document.querySelectorAll(".sMembers__col-toggle");
-		this.classList.toggle('active');
-		toggleBlock.forEach(function (el) {
-			el.classList.toggle('active');
+
+	if (toggleBtn) {
+		toggleBtn.addEventListener('click', function () {
+			var toggleBlock = document.querySelectorAll(".sMembers__col-toggle");
+			this.classList.toggle('active');
+			toggleBlock.forEach(function (el) {
+				el.classList.toggle('active');
+			});
 		});
-	});
+	} // let toggleEdit = document.querySelector('.sCabinet__edit-btn');
+	// if (toggleEdit) {
+	// 	toggleEdit.addEventListener('click', function (e) {
+	// 		e.preventDefault()
+	// 		let toggleBlock = document.querySelectorAll(".sCabinet__input");
+	// 		this.classList.toggle('active')
+	// 		toggleBlock.forEach(function (el) {
+	// 			el.classList.toggle('edit').toggleAttribute(readonly); 
+	// 		}) 
+	// 	})
+	// }
+
 }
 
 ;

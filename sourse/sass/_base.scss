@@ -12,7 +12,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0px;
+	background-position: center 15px;
 	opacity: 0;
 	// opacity: 0.7;
 }
@@ -379,7 +379,16 @@ iframe {
 }
 
 .page-title{
-	padding-bottom: rem(15);
+	margin-bottom: rem(15);
+	@include media-breakpoint-up(down) {
+		.row{
+			@include roww(14px);
+		}
+	}
+	&--lines{
+		border-top: 1px solid rgba($color: #000000, $alpha: .1);
+		border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+	}
 	&__link{
 		color: $primary;
 		display: inline-block;
@@ -399,6 +408,32 @@ iframe {
 		font-weight: 900;
 		color: $primary;
 	}
+	ul{
+		display: flex;
+		align-items: center;
+		list-style: none;
+		margin-bottom: 0;
+		@include media-breakpoint-up(sm) {
+
+			@include roww(33px);
+		}
+		@include roww(10px);
+		a{
+			display: block;
+			padding: rem(16) 0;
+			border-bottom: 2px solid transparent;
+			font-weight: bold;
+			color: #000000;
+			&:hover{
+				color: $primary;
+			}
+			&.active{
+				color: $primary;
+				border-color: currentColor;
+			}
+		}
+	}
+
 }
 
 .sLogin{
@@ -424,3 +459,9 @@ iframe {
 .opacity-05{
 	opacity: 0.5;
 }
+	@include media-breakpoint-up(lg) {
+
+		.row--lg{
+			--bs-gutter-x: 40px;
+		}
+	}

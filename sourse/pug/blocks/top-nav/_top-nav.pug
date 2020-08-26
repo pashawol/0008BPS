@@ -15,7 +15,7 @@ mixin mob-mnu()
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(l) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
@@ -40,12 +40,23 @@ mixin top-nav()
 							</svg>
 
 				.col-auto.order-md-last
-					+e.user(href="#")
-						+icon('user')
+					+e.cabinet
+						if l
+							+b.user-block(href="#")
+								+e.caption
+									+e.name Илья Чертилов
+									+e.text Рувентс, менеджер
+								+pic("teamPers-4",'bg',0)
+							a(href="#")
+								img(src="img/svg/ion_exit-outline.svg", alt="") 
+						else
+							+e.user(href="#")
+								+icon('user')
 				.col-auto.d-md-none
 					+b.toggle-menu-mobile--js
 						span
 				+e.col.col-md
+				
 					.nav-wrap
 
 						+mnu()

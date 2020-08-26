@@ -162,7 +162,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '07.jpg';
+	screenName = '08.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -282,16 +282,31 @@ function eventHandler() {
 
 
 	let toggleBtn = document.querySelector('.sMembers__toggle');
-	toggleBtn.addEventListener('click', function () {
-		let toggleBlock = document.querySelectorAll(".sMembers__col-toggle");
+	if (toggleBtn) {
+
+		toggleBtn.addEventListener('click', function () {
+			let toggleBlock = document.querySelectorAll(".sMembers__col-toggle");
 		this.classList.toggle('active')
 		toggleBlock.forEach(function (el) {
 			el.classList.toggle('active')
 		})
-			
-		})
-
-};
+		
+	})
+}
+	// let toggleEdit = document.querySelector('.sCabinet__edit-btn');
+	// if (toggleEdit) {
+		
+	// 	toggleEdit.addEventListener('click', function (e) {
+	// 		e.preventDefault()
+	// 		let toggleBlock = document.querySelectorAll(".sCabinet__input");
+	// 		this.classList.toggle('active')
+	// 		toggleBlock.forEach(function (el) {
+	// 			el.classList.toggle('edit').toggleAttribute(readonly); 
+	// 		}) 
+	// 	})
+	// }
+		
+	};
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body class="main-page"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -49,10 +49,14 @@
 </svg></a>
 							</div>
 							<div class="col-auto order-md-last">
-								<div class="top-nav__cabinet"><a class="top-nav__user" href="#">
-									<svg class="icon icon-user ">
-										<use xlink:href="img/svg/sprite.svg#user"></use>
-									</svg></a>
+								<div class="top-nav__cabinet"><a class="user-block" href="#"><span class="user-block__caption"><span class="user-block__name">Илья Чертилов</span><span class="user-block__text">Рувентс, менеджер</span></span>
+									<!-- picture-->
+									<picture> 
+										<noscript class="loading-lazy">
+											<source srcset="img/@2x/webp/teamPers-4.webp" loading="lazy" type="image/webp"/><img class="object-fit-js" src="img/@2x/teamPers-4.jpg" loading="lazy" alt=""/>
+										</noscript>
+									</picture>
+									<!-- /picture--></a><a href="#"><img src="img/svg/ion_exit-outline.svg" alt=""/></a>
 								</div>
 							</div>
 							<div class="col-auto d-md-none">
@@ -79,203 +83,117 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start headerBlock-->
-			<div class="headerBlock bg-wrap" id="headerBlock">
-				<!-- picture-->
-				<picture class="picture-bg"> 
-					<noscript class="loading-lazy">
-						<source srcset="img/@2x/webp/head-bg.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="img/@1x/webp/head-bg.webp" loading="lazy" type="image/webp"/>
-						<source srcset="img/@2x/head-bg.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
-						<source srcset="img/@1x/head-bg.jpg" loading="lazy" type="image/jpg"/><img class="object-fit-js" src="img/@2x/head-bg.jpg" loading="lazy" alt=""/>
-					</noscript>
-				</picture>
-				<!-- /picture-->
+			<div class="container">
+				<div class="page-title page-title--lines">
+					<div class="row align-items-center">
+						<div class="col-auto"><a class="page-title__link" href="#">
+							<svg class="icon icon-arrow-back ">
+								<use xlink:href="img/svg/sprite.svg#arrow-back"></use>
+							</svg></a>
+						</div>
+						<div class="col-auto">
+							<ul>
+								<li><a class="active" href="#">Профиль</a></li>
+								<li><a href="#">Мое расписание</a></li>
+								<li><a href="#">Чаты</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- start sCabinet-->
+			<div class="sCabinet">
 				<div class="container">
-					<div class="headerBlock__row row">
-						<div class="headerBlock__col col-xl-auto col-sm col-6"><img class="res-i" src="img/svg/logo-1.svg" loading="lazy" alt=""/>
-						</div>
-						<div class="headerBlock__col col-xl-auto col-sm col-6 order-sm-last"><img class="res-i" src="img/svg/logo-2.svg" loading="lazy" alt=""/>
-						</div>
-						<div class="headerBlock__col col-auto">
-							<div class="headerBlock__date">17–18 сентября
-							</div>
-							<div class="headerBlock__footer">
-								<div class="headerBlock__label">Online-only
-								</div>
-								<div class="headerBlock__text">семинар
-								</div>
-							</div>
-						</div>
-					</div><a class="headerBlock__video bg-wrap" href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&amp;list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&amp;index=13" data-fancybox="videoGal">
-					<!-- picture-->
-					<picture class="picture-bg"> 
-						<noscript class="loading-lazy">
-							<source srcset="img/@2x/webp/video.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="img/@1x/webp/video.webp" loading="lazy" type="image/webp"/>
-							<source srcset="img/@2x/video.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
-							<source srcset="img/@1x/video.jpg" loading="lazy" type="image/jpg"/><img class="object-fit-js" src="img/@2x/video.jpg" loading="lazy" alt=""/>
-						</noscript>
-					</picture>
-					<!-- /picture--><span class="headerBlock__play"></span></a>
-					<div class="headerBlock__text-block">
-						<div class="row align-items-center">
-							<div class="col">
-								<div class="headerBlock__title-sm">Конкурс Индустриальные технологии
-								</div>
-								<div class="headerBlock__text-sm">Startup Village Livestream’20 станет виртуальным событием и главным бесплатным техноло гическим мероприятием 
-								</div>
-								<div class="headerBlock__date-sm">18.08.2020 14:30
+					<div class="row row--lg">
+						<div class="col-xl-3">
+							<div class="sCabinet__aside">
+								<!-- picture-->
+								<picture> 
+									<noscript class="loading-lazy">
+										<source srcset="img/@2x/webp/teamPers-4.webp" loading="lazy" type="image/webp"/><img class="object-fit-js" src="img/@2x/teamPers-4.jpg" loading="lazy" alt=""/>
+									</noscript>
+								</picture>
+								<!-- /picture-->
+								<div>
+									<div class="fw-900 pb-2 ttu">Виктор Моршанский</div>
+									<div class="small opacity-05 pb-2">Управляющий партнер<br/>ООО “Моршанский банк”</div>
+									<div class="small opacity-05 strong">Участник</div>
 								</div>
 							</div>
-							<div class="col-auto">
-								<div class="headerBlock__btn-wrap"><a class="headerBlock__btn" href="#">LIVE</a>
+						</div>
+						<div class="col">
+							<div class="sCabinet__main">
+								<div class="sCabinet__main-head">
+									<div class="row">
+										<div class="col"> 
+											<div class="h5">Общая  информация</div>
+										</div>
+										<div class="col-auto"><a class="sCabinet__edit-btn" href="#"> 
+											<svg class="icon icon-eva_edit-fill ">
+												<use xlink:href="img/svg/sprite.svg#eva_edit-fill"></use>
+											</svg>Редактировать</a>
+										</div>
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Email
+									</div>
+									<div class="sCabinet__input form-control">chertilov+11@raec.ru
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Контактный телефон
+									</div>
+									<div class="sCabinet__input form-control">+7 985 668 99 88
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Компания
+									</div>
+									<div class="sCabinet__input form-control">РУВЕНТС
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Должность
+									</div>
+									<div class="sCabinet__input form-control">Директор направления
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Отрасль
+									</div>
+									<div class="sCabinet__input form-control">EVENTS
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Сфера деятельности
+									</div>
+									<div class="sCabinet__input form-control">Управление
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">Страна проживания
+									</div>
+									<div class="sCabinet__input form-control">Россия
+									</div>
+								</div>
+								<div class="sCabinet__input-wrap form-group"> 
+									<div class="input-title">О себе
+									</div>
+									<div class="sCabinet__input form-control">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тотДавно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот Давно выяснено, что при оценке дизайна и композиции читаемый 
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end headerBlock-->
-			<!-- start sProgram-->
-			<section class="sProgram" id="sProgram"> 
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>Деловая программа</h2>
-						<div class="d-xl-none">
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-arrow-left ">
-									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-								</svg>
-							</div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-arrow-right ">
-									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="sProgram__slider-wrap">
-						<div class="sProgram__slider sProgram__slider--js swiper-container">
-							<div class="swiper-wrapper">
-									<div class="sProgram__slide swiper-slide"><a class="sProgram__item bg-wrap" href="#"><img class="img-bg swiper-lazy" src="#" data-src="img/@2x/slide-1.jpg" alt=""/><span class="sProgram__date">17 сентября</span><span class="sProgram__title sProgram__title--sub">ВРЕМЯ  ИДТИ  К&nbsp;ЦЕЛИ</span><span class="sProgram__title">ВРЕМЯ  ИДТИ  К&nbsp;ЦЕЛИ</span></a>
-									</div>
-									<div class="sProgram__slide swiper-slide"><a class="sProgram__item bg-wrap" href="#"><img class="img-bg swiper-lazy" src="#" data-src="img/@2x/slide-2.jpg" alt=""/><span class="sProgram__date">17 сентября</span><span class="sProgram__title sProgram__title--sub">ВРЕМЯ МЕНЯТЬСЯ</span><span class="sProgram__title">ВРЕМЯ МЕНЯТЬСЯ</span></a>
-									</div>
-									<div class="sProgram__slide swiper-slide"><a class="sProgram__item bg-wrap" href="#"><img class="img-bg swiper-lazy" src="#" data-src="img/@2x/slide-3.jpg" alt=""/><span class="sProgram__date">17 сентября</span><span class="sProgram__title sProgram__title--sub">ВРЕМЯ РАСТИ</span><span class="sProgram__title">ВРЕМЯ РАСТИ</span></a>
-									</div>
-									<div class="sProgram__slide swiper-slide"><a class="sProgram__item bg-wrap" href="#"><img class="img-bg swiper-lazy" src="#" data-src="img/@2x/slide-3.jpg" alt=""/><span class="sProgram__date">17 сентября</span><span class="sProgram__title sProgram__title--sub">ВРЕМЯ РАСТИ</span><span class="sProgram__title">ВРЕМЯ РАСТИ</span></a>
-									</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sProgram-->
-			<div class="bg-grad">
-				<!-- start sPerson-->
-				<section class="sPerson section" id="sPerson">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>Первые</h2>
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-arrow-left ">
-									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-								</svg>
-							</div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-arrow-right ">
-									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="sPerson__container container-fluid">
-						<div class="sPerson__slider-wrap">
-							<div class="sPerson__slider sPerson__slider--js swiper-container">
-								<div class="swiper-wrapper">
-										<div class="sPerson__slide swiper-slide">
-											<div class="sPerson__item"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/team-1.png" alt=""/>
-												<div class="sPerson__caption">
-													<div class="sPerson__title">Колин<br> Максимилиан
-													</div>
-													<div class="sPerson__text">smallagent
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sPerson__slide swiper-slide">
-											<div class="sPerson__item"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/team-2.png" alt=""/>
-												<div class="sPerson__caption">
-													<div class="sPerson__title">Cибирская<br> Ольга
-													</div>
-													<div class="sPerson__text">smallagent
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sPerson__slide swiper-slide">
-											<div class="sPerson__item"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/team-3.png" alt=""/>
-												<div class="sPerson__caption">
-													<div class="sPerson__title">Карганова<br> Малика
-													</div>
-													<div class="sPerson__text">smallagent
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sPerson__slide swiper-slide">
-											<div class="sPerson__item"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/team-3.png" alt=""/>
-												<div class="sPerson__caption">
-													<div class="sPerson__title">Карганова<br> Малика
-													</div>
-													<div class="sPerson__text">smallagent
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sPerson__slide swiper-slide">
-											<div class="sPerson__item"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/team-2.png" alt=""/>
-												<div class="sPerson__caption">
-													<div class="sPerson__title">Cибирская<br> Ольга
-													</div>
-													<div class="sPerson__text">smallagent
-													</div>
-												</div>
-											</div>
-										</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sPerson-->
-				<!-- start sNetworking-->
-				<section class="sNetworking section text-center" id="sNetworking">
-					<div class="container">
-						<div class="sNetworking__element sNetworking__element--1"><img src="img/svg/before.svg" loading="lazy" alt=""/>
-						</div>
-						<div class="sNetworking__element sNetworking__element--2"><img src="img/svg/before.svg" loading="lazy" alt=""/>
-						</div>
-						<div class="section-title">
-							<h2>Нетворкинг </h2>
-						</div>
-						<div class="row">
-									<div class="sNetworking__col col-sm-4"><a class="sNetworking__item" href="#"><span class="sNetworking__icon-wrap"><img src="img/svg/sNetworking-i-1.svg" loading="lazy" alt=""/></span><span class="sNetworking__title">Персональный чат</span></a>
-									</div>
-									<div class="sNetworking__col col-sm-4"><a class="sNetworking__item" href="#"><span class="sNetworking__icon-wrap"><img src="img/svg/sNetworking-i-2.svg" loading="lazy" alt=""/></span><span class="sNetworking__title">Чаты по интересам</span></a>
-									</div>
-									<div class="sNetworking__col col-sm-4"><a class="sNetworking__item" href="#"><span class="sNetworking__icon-wrap"><img src="img/svg/sNetworking-i-3.svg" loading="lazy" alt=""/></span><span class="sNetworking__title">Вопросы спикеру</span></a>
-									</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sNetworking-->
-				<!-- start sContact-->
-				<div class="sContact section" id="sContact">
-					<div class="container"> 
-						<div class="row">
-							<div class="sContact__col col-sm"><svg width="191" height="51" viewBox="0 0 191 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<!-- end sCabinet-->
+			<!-- start sContact-->
+			<div class="sContact section" id="sContact">
+				<div class="container"> 
+					<div class="row">
+						<div class="sContact__col col-sm"><svg width="191" height="51" viewBox="0 0 191 51" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.0524 8.99014C16.4366 8.99014 20.7224 10.2776 20.7224 15.7225C20.7224 21.1418 16.4366 22.425 12.0524 22.425H1V1.47928H18.8233V7.01833H8.4467V8.99442H12.0524V8.99014ZM11.12 17.4035C12.4074 17.4035 13.3442 17.0742 13.3442 15.7268C13.3442 14.3795 12.4074 14.0202 11.12 14.0202H8.4467V17.4035H11.12V17.4035Z" stroke="white"   stroke-miterlimit="10"/>
 <path d="M23.3359 22.4293V1.47928H44.4784V22.4293H37.0659V7.52304H30.7484V22.4293H23.3359Z" stroke="white"  stroke-miterlimit="10"/>
 <path d="M59.6577 1C61.976 1 64.2986 1.41917 66.296 2.25751V8.42532C65.0385 7.61692 62.9769 6.98816 60.9794 6.98816C57.887 6.98816 54.9528 8.42532 54.9528 12.1679C54.9528 15.4614 57.8527 16.8387 60.8169 16.8387C63.1352 16.8387 65.2952 16.2997 66.4586 15.3416V21.6591C64.4611 22.4975 62.2369 22.9167 59.8502 22.9167C53.4686 22.9167 47.3136 19.8028 47.3136 12.1722C47.2836 4.20367 53.4728 1 59.6577 1Z" stroke="white"  stroke-miterlimit="10"/>
@@ -291,33 +209,32 @@
 <path d="M91.6992 50.3894V29.4394H99.1459V35.4276H101.563C106.751 35.4276 111.298 37.0144 111.298 42.9085C111.298 48.7769 106.755 50.3894 101.563 50.3894H91.6992ZM99.1416 44.7049H101.494C102.816 44.7049 103.945 44.1959 103.945 42.9085C103.945 41.621 102.816 41.112 101.494 41.112H99.1416V44.7049ZM112.679 50.3894V29.4394H120.126V50.3894H112.679Z" fill="white"/>
 <path d="M121.546 50.3894L129.279 39.585L121.931 29.4394H130.601L133.954 34.8587L137.273 29.4394H145.943L138.595 39.585L146.328 50.3894H137.658L133.95 44.4911L130.212 50.3894H121.546Z" fill="white"/>
 </svg>
-							</div>
-							<div class="sContact__col col-auto"><a class="sContact__link" href="#">Контакты</a>
-							</div>
-							<div class="sContact__col col-auto"><a class="sContact__btn" href="#">Войти</a>
-							</div>
+						</div>
+						<div class="sContact__col col-auto"><a class="sContact__link" href="#">Контакты</a>
+						</div>
+						<div class="sContact__col col-auto"><a class="sContact__btn" href="#">Войти</a>
 						</div>
 					</div>
 				</div>
-				<!-- end sContact-->
-				<footer class="footer block-with-lazy">
-					<div class="container">
-						<div class="row">
-							<div class="footer__col col-lg-auto">© 2020. Время первых
-							</div>
-							<div class="footer__col col-lg-auto"><a class="footer__link" href="https://kontur.ru/about/policy" target="_blank">Политика конфиденциальности</a>
-							</div>
-							<div class="footer__col col-xl-auto col"><a class="footer__link" href="https://auth.kontur.ru/?back=https://info.kontur.ru/documents/1ecd360a-5608-4020-aff1-e5dfb2825c48" target="_blank">Договор на оказание услуг по проведению семинаров/вебинаров</a>
-							</div>
-							<div class="footer__col col-lg-auto"><a class="footer__mail" href="mailto:manakova@skbkontur.ru">
-								<svg class="icon icon-mail ">
-									<use xlink:href="img/svg/sprite.svg#mail"></use>
-								</svg>manakova@skbkontur.ru</a>
-							</div>
+			</div>
+			<!-- end sContact-->
+			<footer class="footer block-with-lazy">
+				<div class="container">
+					<div class="row">
+						<div class="footer__col col-lg-auto">© 2020. Время первых
+						</div>
+						<div class="footer__col col-lg-auto"><a class="footer__link" href="https://kontur.ru/about/policy" target="_blank">Политика конфиденциальности</a>
+						</div>
+						<div class="footer__col col-xl-auto col"><a class="footer__link" href="https://auth.kontur.ru/?back=https://info.kontur.ru/documents/1ecd360a-5608-4020-aff1-e5dfb2825c48" target="_blank">Договор на оказание услуг по проведению семинаров/вебинаров</a>
+						</div>
+						<div class="footer__col col-lg-auto"><a class="footer__mail" href="mailto:manakova@skbkontur.ru">
+							<svg class="icon icon-mail ">
+								<use xlink:href="img/svg/sprite.svg#mail"></use>
+							</svg>manakova@skbkontur.ru</a>
 						</div>
 					</div>
-				</footer>
-			</div>
+				</div>
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
