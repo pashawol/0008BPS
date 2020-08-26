@@ -1,0 +1,46 @@
+mixin sEvents()
+	// start sEvents
+	+b.sEvents.section#sEvents&attributes(attributes)
+		.container
+			
+				mixin item(d,t)
+					+e.item
+						.row
+							+e.time.col-lg-auto.col.order-first!= d
+							block
+							.col-lg.fw-500.order-lg-first!= t
+
+				+item(`09:45&nbsp;&mdash; 10:45`, `Распределенная продажа: предпосылки и&nbsp;перспективы`)
+					.col-auto.order-lg-last
+						+e.star.active
+							+icon('star')
+					.col-md-auto.order-md-first.order-lg-0
+						+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+						+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+
+				+item(`09:45&nbsp;&mdash; 10:45`, `Распределенная продажа: предпосылки и&nbsp;перспективы Распределенная продажа: предпосылки и&nbsp;перспективы аспределенная продажа: предпосылки и&nbsp;перспективы`)
+					.col-auto.order-lg-last
+						+e.star.active
+							+icon('star')
+					.col-md-auto.order-md-first.order-lg-0
+						+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+						+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+
+				+item(`09:45&nbsp;&mdash; 10:45`, `Распределенная продажа: предпосылки и&nbsp;перспективы`)
+					.col-auto.order-lg-last
+						+e.star.active
+							+icon('star')
+					.col-md-auto.order-md-first.order-lg-0
+						+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+						+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+						
+				+item(`09:45&nbsp;&mdash; 10:45`, `Распределенная продажа: предпосылки и&nbsp;перспективы Распределенная продажа: предпосылки и&nbsp;перспективы аспределенная продажа: предпосылки и&nbsp;перспективы`)
+					.col-auto.order-lg-last
+						+e.star.active
+							+icon('star')
+					.col-md-auto.order-md-first.order-lg-0
+						+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+						+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+
+
+	// end sEvents
