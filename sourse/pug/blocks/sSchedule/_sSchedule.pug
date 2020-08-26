@@ -1,0 +1,122 @@
+mixin sSchedule()
+	// start sSchedule
+	+b.sSchedule#sSchedule&attributes(attributes)
+		.container
+			+e.head
+				+e.btn-date(href="#") 13 Cентября
+				+e.btn-date(href="#").active 14 Cентября
+		+e.container.container
+			mixin item(d)
+				+e.item
+					+e.row.row
+						+e.aside-col.col-sm-auto= d
+						+e.main-col.col
+							block
+			+item('09:00 – 09:10')
+				+e.block--lines
+					+e.title.mb-0 Открытие семинара
+			+item('09:10 – 09:25')
+				+e.block.bg-white
+					.row
+						.col-sm
+							+e.title Время возможностей
+							.text-primary 
+								.fw-500.small Евгений Филатов 
+									br
+									| генеральный директор
+						.col-auto
+							+b.label-elem(style="color: #F7625D; background: rgba(247, 98, 93, 0.15);") Для всех
+						.col-auto
+							+e.star 
+								+icon('star')
+			+item('09:25 – 09:45')
+				+e.block.bg-white
+					.row
+						.col-sm
+							+e.title Время создавать будущее
+							.text-primary 
+								.fw-500.small Геннадий Викулов
+									br
+									| руководитель Управления регионального развития
+						.col-auto
+							+b.label-elem(style="color: #F7625D; background: rgba(247, 98, 93, 0.15);") Для всех
+						.col-auto
+							+e.star 
+								+icon('star')
+			+item('09:45 – 10:45')
+				.row
+					mixin card(t,n)
+						+b.card-item
+							if t
+								+e.head= t
+									+e.number= n
+							block
+							
+					+e.col.col-lg-4
+						+card("Время идти к цели","01")
+							+e.body
+								.row.align-items-center.mb-2
+									.col
+										+e.time 09:45 – 10:45
+									.col-auto
+										.sSchedule__star 
+											+icon('star')
+								.fw-500 Распределенная продажа: предпосылки и&nbsp;перспективы
+									.text-primary Брифинг
+							+e.footer
+								+b.label-elem(style="color: #F7625D; background: rgba(247, 98, 93, 0.15);") Для всех
+					+e.col.col-lg-4.col-md-6
+						+card("Время меняться","02")
+							+e.body
+								.row.align-items-center.mb-2
+									.col
+										+e.time 09:45 – 10:15
+									.col-auto
+										.sSchedule__star 
+											+icon('star')
+								.fw-500 Измененияв&nbsp;Контур.Экстерне. Ключевые активностив&nbsp;продажах и&nbsp;как увеличить выручку
+							+e.footer
+								+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+								+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+						+card()
+							+e.body
+								.row.align-items-center.mb-2
+									.col
+										+e.time 09:45 – 10:15
+									.col-auto
+										.sSchedule__star 
+											+icon('star')
+								.fw-500 Контур.Диадок &mdash; это не&nbsp;только трафик
+							+e.footer
+								+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+								+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+					+e.col.col-lg-4.col-md-6
+						+card("Время расти","03")
+							+e.body
+								.row.align-items-center.mb-2
+									.col
+										+e.time 09:45 – 10:15
+									.col-auto
+										.sSchedule__star.active 
+											+icon('star')
+								.fw-500 Начни продажи Диадока на&nbsp;раз-два-три.
+							+e.footer
+								+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+								+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер 
+						+card()
+							+e.body
+								.row.align-items-center.mb-2
+									.col
+										+e.time 09:45 – 10:15
+									.col-auto
+										.sSchedule__star 
+											+icon('star')
+								.fw-500 Новое в&nbsp;Контур.Экстерне для обслуживающих бухгалтерий
+							+e.footer
+								+b.label-elem(style="color: #59C442; background: rgba(89, 196, 66, 0.15);") РОП
+								+b.label-elem(style="color: #EB5DF7; background: rgba(235, 93, 247, 0.15);") Менеджер
+						
+			+item('10:45 – 11:20')
+				+e.block--lines
+					+e.title.mb-0 Перерыв
+	// end sSchedule

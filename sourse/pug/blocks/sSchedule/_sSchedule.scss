@@ -1,0 +1,217 @@
+
+	// start .sSchedule
+	.sSchedule {
+			@include media-breakpoint-up(lg) {
+				--aside: #{rem(158 + 15)};
+			}
+					@include media-breakpoint-up(sm) {
+						--aside: #{rem(140)};
+					}
+					// --aside: 90px;
+		// &__aside-text{
+		// 		@include media-breakpoint-down(sm) {
+		// 			position: relative;
+		// 			transform: rotate(-90deg);
+		// 			transform-origin: left top;
+		// 			white-space: nowrap;
+		// 			position: absolute;
+		// 			left: 15px;
+		// 			top: 0;
+		// 		}
+		// }
+		&__head{
+			display: flex;
+			margin-left: -9px;
+			margin-right: -9px;
+			padding-bottom: rem(23);
+		}
+		&__btn-date{
+			margin-left: 9px;
+			margin-right: 9px;
+			@extend .btn;
+			@extend .btn-outline-primary;
+			color: $body-color;
+			font-size: rem(14);
+			border-radius: rem(4px);
+			padding: rem(5) rem(12);
+			font-weight: 500;
+			margin-bottom: rem(30);
+		}
+		&__container{
+			position: relative;
+			padding-bottom: var(--sPB);
+				@include media-breakpoint-up(sm){
+
+					&::before{
+						content: '';
+						height: 100%;
+						
+						left: var(--aside);
+						border-right: 1px solid #ACB5BD;
+						position: absolute;
+					}
+				}
+
+		}
+ 
+			&__aside-col { 
+				position: relative;
+					@include media-breakpoint-up(sm){
+
+						width: var(--aside);
+						padding-bottom: rem(22);
+					}
+					padding-bottom: rem(12);
+				@include media-breakpoint-up(sm){ 
+				padding-top: rem(25);
+				}
+			}
+			&__main-col{
+				@include media-breakpoint-up(lg){ 
+					padding-left: rem(40);
+				}
+				padding-bottom: rem(22);
+			}
+		
+			&__title{
+				font-weight: 500;
+
+				margin-bottom: rem(12);
+			}
+			&__star{
+				color: $primary;
+				margin-bottom: rem(10);
+				.icon{
+					stroke: currentColor;
+					fill:transparent;
+					font-size: rem(35); 
+					@include mt;
+				}
+					&:hover,
+					&.active {
+						.icon {
+							fill: currentColor;
+						}
+					}
+			}
+ 
+				&__block {
+					@include media-breakpoint-up(lg) {
+
+						padding: rem(20) rem(30); 
+					}
+					padding: rem(20) rem(15); 
+					padding-right: rem(15);
+					.row {
+						align-items: center;
+					}
+					&--lines{
+						@include media-breakpoint-up(lg) {
+
+							padding: rem(25) rem(30); 
+						}
+						padding: rem(25) rem(15); 
+						--gutter: 8px;
+						min-height: rem(80);
+						background-image: repeating-linear-gradient(-45deg,
+							transparent,
+							transparent var(--gutter),
+							rgba(61, 103, 255, 0.2) var(--gutter),
+							rgba(61, 103, 255, 0.2) calc(var(--gutter)+ 2px));
+					}
+				}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	
+	&__col{
+		display: flex;
+		flex-direction: column;
+	}
+} // end.sSchedule
+
+.label-elem{
+
+	border-radius: 15px;
+	display: inline-block;
+	padding: rem(6) rem(16);
+	display: inline-block;
+	margin-left: rem(10);
+	margin-right: rem(10);
+	margin-bottom: rem(10);
+	// gap: 30px;
+}
+.card-item{
+	background-color: #fff;
+	border-radius: 4px 4px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+	min-height: rem(266);
+	
+&__head{
+	color: #ffffff;
+	background-color: $primary;
+	font-size: rem(14);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include media-breakpoint-up(lg) {
+
+		padding: rem(0) rem(30);
+		padding-right: rem(22);
+	}
+	padding: rem(0) rem(20);
+	border-radius: 4px 4px 0 0;
+}
+&__number{
+	font-weight: 800;
+	@include rfs(30px);
+	// line-height: 1;
+}
+&__body{
+	@include media-breakpoint-up(lg) {
+
+		padding: rem(26) rem(30);
+	}
+	padding: rem(20) rem(20);
+	padding-right: rem(22);
+	flex-grow: 1;
+	// display: flex;
+	// flex-direction: column;
+}
+&__time{
+	@include rfs(19px);
+	opacity: 0.5;
+}
+&__footer{
+	@include media-breakpoint-up(lg) {
+		padding: rem(26) rem(30)  rem(20);
+		padding-right: rem(22); 
+	}
+	padding: rem(26)   rem(20);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+}
+}

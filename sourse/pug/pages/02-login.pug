@@ -32,8 +32,9 @@ block pagecontent
 						+input("E-mail",'email','E-mail')
 						button.btn.btn-primary(type="submit") Продолжить
 				.col-lg-4.col.offset-xl-2.offset-lg-1
-					p.pb-3 Регистрация участников происходит на #[a(href="#") Контур.Инфо]. Доступ к&nbsp;трансляции мероприятия имеют только действующие партнеры и&nbsp;сотрудники СКБ Контур.
-					a.btn.btn-primary(href="#") Регистрация
+					+e.caption
+						p.pb-3 Регистрация участников происходит на #[a(href="#") Контур.Инфо]. Доступ к&nbsp;трансляции мероприятия имеют только действующие партнеры и&nbsp;сотрудники СКБ Контур.
+						a.btn.btn-primary(href="#") Регистрация
 	//- +headerBlock()
 	//- +sProgram
 	//- .bg-grad

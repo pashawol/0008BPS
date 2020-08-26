@@ -25,20 +25,44 @@ block pagecontent
 				.col
 					h1= title
 	+b.sLogin.section
-		.container
-			.row
-				.col-xl-5.col-lg-6
-					+form-wrap(class="form-wrap--border")
-						+input("E-mail",'email','E-mail')
-						+input("Пароль",'password','Пароль')
-						.row.align-items-center
-							.col-auto.col-md-6
-								button.btn.btn-primary(type="submit") Войти
-							.col-auto.col-md-6
-								a(href="#") Востановить пароль
-				.col-lg-4.col.offset-xl-2.offset-lg-1
-					p.pb-3 Регистрация участников происходит на #[a(href="#") Контур.Инфо]. Доступ к&nbsp;трансляции мероприятия имеют только действующие партнеры и&nbsp;сотрудники СКБ Контур.
-					a.btn.btn-primary(href="#") Регистрация
+		.container 
+			+b.form-wrap(class="form-wrap--border")
+				form
+					//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
+					.row
+						.col-lg-6
+							+input("",'text','Фамилия')
+						.col-lg-6
+							+input("",'text','Имя')
+						.col-lg-6
+							+input("",'email','Электронный адрес')
+						.col-lg-6
+							+input("",'tel','Телефон')
+						.col-lg-6
+							+input("",'text','Город ')
+						.col-lg-6
+							+input("",'text','Компания')
+						.col-lg-6
+							+input("",'text','Должность')
+							+input("",'text','Пароль')
+							+input("",'text','Повторите пароль')
+						.col-lg-6
+							//- #dropzone.fallback
+							//- 	+e.prev-wrap
+							//- 		+icon("photo")
+							//- 		.strong Ваше фото
+							//- 		+e.text  Формат&nbsp;3:4, jpeg, jpg png не&nbsp;более 1&nbsp;mb
+								
+							//- 		input(name='file', type='file', multiple='')
+						.col-lg-6
+							button.btn.btn-primary.w-100(type="submit") Зарегистрироваться
+						.col-lg-6
+							+in-c()
+								+e.SPAN.text Я&nbsp;даю согласие на&nbsp;#[a(href="#") обработку персональных данных] и получение информационных сообщений от&nbsp;компании СКБ Контур
+				
+							+in-c()
+								+e.SPAN.text Я&nbsp;принимаю условия #[a(href="#") договора на&nbsp;оказание услуг по&nbsp;проведению семинаров/вебинаров]
+					 
 	//- +headerBlock()
 	//- +sProgram
 	//- .bg-grad

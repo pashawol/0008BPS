@@ -162,7 +162,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '02.jpg';
+	screenName = '04.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -273,6 +273,12 @@ function eventHandler() {
 			}
 		},
 	});
+
+
+	// $(".dropzone").dropzone({
+	// 	url: "/file-upload"
+	// });
+	$("div#dropzone").dropzone({ url: "/file-upload" });
 
 };
 if (document.readyState !== 'loading') {
