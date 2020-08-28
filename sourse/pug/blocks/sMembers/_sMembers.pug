@@ -22,12 +22,15 @@ mixin sMembers()
 				mixin item(i,t)
 					.col-xl-3.col-lg-4.col-sm-6
 						+e.item
-							+e.img-wrap.bg-wrap(href="#")
+							+e.img-wrap.bg-wrap
 								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
-								+e.DIV.btn
-									+e.DIV.icon-wrap
-										+icon("comment")
-									+e.DIV.btn-text Написать <br> сообщение
+								+e.DIV.img-inner
+									+e.DIV.btn(href="#").text-white
+										+e.DIV.icon-wrap
+											+icon("comment")
+										+e.DIV.btn-text.text-white Написать <br> сообщение 
+									+e.DIV.btn-text
+										a(href="#").text-white Открыть биографию
 							+e.DIV.title
 								a(href="#")= t
 							+e.DIV.text Управляющий партнер
