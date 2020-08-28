@@ -39,6 +39,12 @@
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: $white;
+		@include mt;
+		&:hover {
+			color: $white;
+			box-shadow: 0px 53.6471px 24.1412px -11.6235px rgba(0, 0, 0, 0);
+			transform: translateY(10px);
+		}
 	}
 
 	h3{
