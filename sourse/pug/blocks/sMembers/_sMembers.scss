@@ -41,17 +41,23 @@
 			}
 		}
 	}
-	&__item:hover &__btn {
+	&__item:hover &__img-inner {
 		opacity: 1;
+		z-index: 4;
+		text-align: center;
+	}
+	&__img-inner{
+
+		opacity: 0;
+		@include a-cent;
 	}
 	&__btn{
-		opacity: 0;
 		@include mt;
+		margin-bottom: 2rem;
+		display: block;
 
-		@include a-cent;
 		text-align: center;
 		color: #ffffff;
-		z-index: 4;
 	}
 	&__icon-wrap{
 		background-color: $primary;
