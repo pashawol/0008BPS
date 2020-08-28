@@ -2,8 +2,26 @@ mixin sTrackPlan()
 	// start sTrackPlan
 	+b.SECTION.sTrackPlan.section#sTrackPlan&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sTrackPlan
-				
+			+b.section-title
+				h3 Программа трека
 			.row
+				mixin item(d,t,p)
+					+e.col.col-lg-3.col-md-6.col-sm-12
+						+e.item
+							+e.img-wrap(href="#")
+								img.res-i(src="img/@2x/sTrackPlan.png", alt="")
+							+e.DIV.text-block
+								+e.DIV.dt
+									+e.DIV.date!= d
+									+e.time!= t
+								+e.DIV.descr!= p
+
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				
+
+
+
 	// end sTrackPlan
