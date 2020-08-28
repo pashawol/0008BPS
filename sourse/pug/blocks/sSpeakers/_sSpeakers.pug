@@ -1,0 +1,27 @@
+mixin sSpeakers()
+	// start sSpeakers
+	+b.SECTION.sSpeakers.section#sSpeakers&attributes(attributes)
+		.container
+			+b.section-title
+				h3 Спикеры
+			.row
+				mixin item(t,p)
+					+e.col.col-md-4
+						+e.item
+							+e.img-wrap(href="#")
+								img(src="img/@2x/sSpeakers.png", alt="")
+							+e.DIV.title
+								a(href="#")!= t
+							+e.DIV.text!= p
+
+				+item(`Виктория Моршанская`, `Управляющий партнер ООО &laquo;Моршанский банк&raquo;`)
+				+item(`Виктория Моршанская`, `Управляющий партнер ООО &laquo;Моршанский банк&raquo;`)
+				+item(`Виктория Моршанская`, `Управляющий партнер ООО &laquo;Моршанский банк&raquo;`)
+				+item(`Виктория Моршанская`, `Управляющий партнер ООО &laquo;Моршанский банк&raquo;`)
+				+item(`Виктория Моршанская`, `Управляющий партнер ООО &laquo;Моршанский банк&raquo;`)
+
+
+
+
+
+	// end sSpeakers
