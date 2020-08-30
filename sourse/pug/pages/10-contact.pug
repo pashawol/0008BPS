@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sPerson/_sPerson.pug
+include ../blocks/sMembers/_sMembers.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+page-title(title)
+	+sMembers10()
+	+sContact
+	+footer()
+
+
+	

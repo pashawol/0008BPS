@@ -9,17 +9,14 @@
 		color: $primary;
 		letter-spacing: 0.04em;
 	}
-
+	&__row{ 
+	}
 	&__col{
-		&:not(:last-child){
-			margin-right: 10px;
-		}
+		
 	}
 
 	&__item{
-		@include media-breakpoint-down(lg) {
-			margin-bottom: 40px;
-		}
+		margin-bottom: 30px;
 		
 	}
 

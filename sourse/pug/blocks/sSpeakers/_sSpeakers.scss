@@ -1,6 +1,8 @@
 	// start .sSpeakers
 .sSpeakers {
-		 
+		 .section-title{
+			 color: $primary;
+		 }
 
 
 	@include media-breakpoint-up(xl) {}

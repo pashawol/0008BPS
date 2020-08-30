@@ -98,37 +98,7 @@ const JSCCommon = {
 		}
 	},
 	// /mobileMenu
-
-	// табы  .
-	tabscostume(tab) {
-
-		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-		}
-		tabs.Btn.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				if (!element.classList.contains('active')) {
-					let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
-					let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active')
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				} 
-			})
-		})
-		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-
-		// });
-
-	},
-	// /табы
+ 
 
 	inputMask() {
 		// mask for input
@@ -153,56 +123,23 @@ const $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.ifie(); 
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	var x = window.location.host;
-	let screenName;
-	screenName = '08.jpg';
-	if (screenName && x === "localhost:3000") {
-		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	 
 	// /добавляет подложку для pixel perfect
-
-
-	function whenResize() {
  
-
-	}
-
-	window.addEventListener('resize', () => {
-		whenResize();
-
-	}, { passive: true });
-
-	whenResize();
-
-
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 4,
 		},
-		watchOverflow: true,
-		
-		loop: true,
-		// navigation: {
-		// 	nextEl: '.swiper-button-next',
-		// 	prevEl: '.swiper-button-prev',
-		// },
-		// pagination: {
-		// 	el: ' .swiper-pagination',
-		// 	type: 'bullets',
-		// 	clickable: true,
-		// 	// renderBullet: function (index, className) {
-		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// 	// }
-		// },
+		watchOverflow: true, 
+		loop: true, 
 	}
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
@@ -279,9 +216,7 @@ function eventHandler() {
 	// $(".dropzone").dropzone({
 	// 	url: "/file-upload"
 	// });
-	$("div#dropzone").dropzone({ url: "/file-upload" });
-
-
+	 
 	let toggleBtn = document.querySelector('.sMembers__toggle');
 	if (toggleBtn) {
 
@@ -306,7 +241,7 @@ function eventHandler() {
 	// 		}) 
 	// 	})
 	// }
-		
+ 
 	};
 if (document.readyState !== 'loading') {
 	eventHandler();

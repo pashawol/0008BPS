@@ -10,6 +10,7 @@ include ../blocks/sLive/_sLive.pug
 include ../blocks/sSpeakers/_sSpeakers.pug
 include ../blocks/sQuestions/_sQuestions.pug
 include ../blocks/sTrackPlan/_sTrackPlan.pug
+include ../blocks/sStream/_sStream.pug
 
 block variables
 	- let  mainPage= null
@@ -21,12 +22,14 @@ block pagecontent
 	+header()
 		+top-nav()
 	+page-title(title)
-	+sLive
+	+sProgram-5
+	//- +sLive
+	+sStream
 	.container
-		+b.main-row.row
-			+e.speakers.col-md-6
+		+b.main-row.row.row--lg
+			+e.speakers-col.col-xl-6
 				+sSpeakers
-			+e.questions.col-md-6
+			+e.questions-col.col-xl-6
 				+sQuestions
 
 	//- +sLive()

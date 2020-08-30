@@ -35,6 +35,9 @@ display: inline-block;
  	&__btn{
  		cursor: pointer;
  	}
+	 textarea{
+		 min-height: 10em;
+	 }
 }
 .form-group{
 	

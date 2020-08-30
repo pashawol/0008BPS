@@ -1,11 +1,36 @@
 mixin sSpeakers()
 	// start sSpeakers
-	+b.SECTION.sSpeakers.section#sSpeakers&attributes(attributes)
+	+b.SECTION.sMembers.pb-0.section#sSpeakers&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-primary
 				h3 Спикеры
 			.row
-
+				mixin item(i,t)
+					.col-md-4.col-sm-6
+						+e.item
+							+e.img-wrap.bg-wrap(href="#")
+								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+								//- +e.DIV.img-inner
+								//- 	+e.DIV.btn.text-white
+								//- 		+e.DIV.icon-wrap
+								//- 			+icon("comment")
+								//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
+								//- 	+e.DIV.btn-text
+								//- 		a(href="#").text-white Открыть биографию
+							+e.DIV.title
+								a(href="#")= t
+							+e.DIV.text.small Управляющий партнер
+								br
+								| ООО “Моршанский
+								br
+								| банк”
+					// /.col-xl-3.col-lg-4.col-sm-6
+				+item('1','Виктория Моршанская')
+				+item('2','Виктор Моршанский')
+				+item('3','Виктория Моршанская')
+				+item('4','Виктор Моршанский')
+				+item('5','Виктор Моршанский') 
+				
 
 
 

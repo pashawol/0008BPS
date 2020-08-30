@@ -36,3 +36,79 @@ mixin sCabinet()
 						+line("В этом году я впервые ...",'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тотДавно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот Давно выяснено, что при оценке дизайна и композиции читаемый ','te')
 
 	// end sCabinet
+mixin sCabinet4()
+	// start sCabinet
+	+b.sCabinet&attributes(attributes)
+		.container
+			.row.row--lg
+				
+				.col
+					+e.main
+						.public-chat.d-flex.flex-column
+							input(type='hidden', value='307befb6-b8bf-469c-860e-7eb1504f594c')
+							  
+								//- .ps__rail-x(style='left: 0px; bottom: 0px;')
+								//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
+								//- .ps__rail-y(style='top: 0px; right: 0px;')
+								//- 	.ps__thumb-y(tabindex='0', style='top: 0px; height: 0px;')
+							.public-chat-messages.ps.ps--active-y
+								//- .ps__rail-x(style='left: 0px; bottom: -21209px;')
+								//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
+								//- .ps__rail-y(style='top: 21209px; right: 0px; height: 282px;')
+								//- 	.ps__thumb-y(tabindex='0', style='top: 279px; height: 3px;')
+								- for (var x = 0; x < 1; x++)
+									.chat-message
+										.chat-message-text-wrapper.chat-message-text-wrapper--left
+											.chat-message-text
+												| MTS StartUp Hub – это платформа открытых инноваций включающая в себя акселератор
+										.chat-message-description
+											| 12:41 22.05.2020
+									+b.chat-message--right
+										.chat-message-text-wrapper.chat-message-text-wrapper--right
+											.chat-message-text
+												| MTS StartUp Hub – это платформа открытых инноваций включающая в себя акселератор
+										.chat-message-description
+											| 12:41 22.05.2020
+								.chat-message
+									+b.chat-message-file-wrapper
+										+icon("ion_document")
+										+e.caption
+											+e.name Filename.pdf
+											+e.size 12 mb 
+									.chat-message-description
+										| 12:41 22.05.2020
+								+b.chat-message--right
+									+b.chat-message-file-wrapper
+										+icon("ion_document")
+										+e.caption
+											+e.name Filename.pdf
+											+e.size 12 mb
+									.chat-message-description
+										+icon('check-read')
+										| 12:41 22.05.2020
+							.d-none
+								// блок если не вошел
+								.mt-auto.px-1-5.py-1
+									| Для отправки сообщений
+									a(href='/login?_target_path=/live') Войдите
+									|  или
+									a(href='/registration') Зарегистрируйтесь
+									| .
+							form.public-chat-form
+								button.public-chat-form-btn(type='submit')
+									+icon("ion_attach-outline")
+								input.public-chat-form-input(type='text', placeholder='Написать сообщение')
+								button.public-chat-form-btn(type='submit')
+									+icon("uil_smile")
+								button.public-chat-form-btn(type='submit')
+									+icon("feather_send")
+				.col-xl-3
+					+e.aside.h-100
+						+pic("teamPers-4",'bg',0)
+						div
+							.fw-900.pb-2.ttu Виктор Моршанский
+							.small.opacity-05.pb-2 Управляющий партнер
+								br
+								| ООО “Моршанский банк”
+							.small.opacity-05.strong.mt-a Участник
+	// end sCabinet

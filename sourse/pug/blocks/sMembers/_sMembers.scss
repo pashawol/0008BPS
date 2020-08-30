@@ -15,7 +15,7 @@
 			}
 		}
 	&__item{
-		margin-bottom: rem(45);
+		margin-bottom: rem(40);
 		display: block;
 			color: $body-color !important;
 	}
@@ -40,6 +40,11 @@
 				opacity: 1;
 			}
 		}
+	}
+	&__item:hover &__img-wrap {
+			&::after {
+				opacity: 1;
+			}
 	}
 	&__item:hover &__img-inner {
 		opacity: 1;
@@ -96,6 +101,7 @@
 		font-size: $small;
 		line-height: 140%;
 		max-width: 200px;
+		margin-bottom: rem(8);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

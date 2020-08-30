@@ -108,32 +108,6 @@ var JSCCommon = {
 		}
 	},
 	// /mobileMenu
-	// табы  .
-	tabscostume: function tabscostume(tab) {
-		var tabs = {
-			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
-			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
-			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
-		};
-		tabs.Btn.forEach(function (element, index) {
-			element.addEventListener('click', function () {
-				if (!element.classList.contains('active')) {
-					var siblings = element.parentNode.querySelector(".".concat(tab, "__btn.active"));
-					var siblingsContent = tabs.Content[index].parentNode.querySelector(".".concat(tab, "__content.active"));
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active');
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				}
-			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
-	},
-	// /табы
 	inputMask: function inputMask() {
 		// mask for input
 		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
@@ -157,29 +131,12 @@ function eventHandler() {
 	var _objectSpread2;
 
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.ifie(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
+	// /добавляет подложку для pixel perfect
 
-	var x = window.location.host;
-	var screenName;
-	screenName = '08.jpg';
-
-	if (screenName && x === "localhost:3000") {
-		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	} // /добавляет подложку для pixel perfect
-
-
-	function whenResize() {}
-
-	window.addEventListener('resize', function () {
-		whenResize();
-	}, {
-		passive: true
-	});
-	whenResize();
 	var defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -187,19 +144,7 @@ function eventHandler() {
 			loadPrevNextAmount: 4
 		},
 		watchOverflow: true,
-		loop: true // navigation: {
-		// 	nextEl: '.swiper-button-next',
-		// 	prevEl: '.swiper-button-prev',
-		// },
-		// pagination: {
-		// 	el: ' .swiper-pagination',
-		// 	type: 'bullets',
-		// 	clickable: true,
-		// 	// renderBullet: function (index, className) {
-		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// 	// }
-		// },
-
+		loop: true
 	};
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
@@ -260,9 +205,6 @@ function eventHandler() {
 	// 	url: "/file-upload"
 	// });
 
-	$("div#dropzone").dropzone({
-		url: "/file-upload"
-	});
 	var toggleBtn = document.querySelector('.sMembers__toggle');
 
 	if (toggleBtn) {

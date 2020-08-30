@@ -8,6 +8,9 @@
 		font-size: 50px;
 	}
 	.sProgram {
+		&--page{
+			padding-top: rem(40);
+		}
 		color: #ffffff; 
 		position: relative;
 		z-index: 2;
@@ -28,29 +31,39 @@
 		}
 		&__slider-wrap{
 			position: relative;
-			z-index: 2;
-			&::before{ 
-				@include repeat(' ДЕЛОВАЯ ПРОГРАММА ', 30);
-				opacity: 0.6;
-				position: absolute;
-				left: -100%;
-				margin-left: 100px;
-				width: calc(300%);
-				top: .6em;
-				font-size: rem(80);
-				text-transform: uppercase;
-				font-weight: 900;
-				line-height: 1.1;
-				-webkit-text-fill-color: transparent;
-				/* Will override color (regardless of order) */
-				-webkit-text-stroke-width: 1px;
-				-webkit-text-stroke-color: #ffffff;
-				height: calc(100% - 33px - 110px);
-				z-index: -1;
-				overflow: hidden;
+			--swiperArrowPosition: #{rem(-45)};
+			.swiper-button-hand{
+				margin-top: rem(-35);
+				.icon{
+					color: $primary;
+				}
 			}
+			 &--main{
+				z-index: 2;
+				&::before{ 
+					@include repeat(' ДЕЛОВАЯ ПРОГРАММА ', 30);
+					opacity: 0.6;
+					position: absolute;
+					left: -100%;
+					margin-left: 100px;
+					width: calc(300%);
+					top: .6em;
+					font-size: rem(80);
+					text-transform: uppercase;
+					font-weight: 900;
+					line-height: 1.1;
+					-webkit-text-fill-color: transparent;
+					/* Will override color (regardless of order) */
+					-webkit-text-stroke-width: 1px;
+					-webkit-text-stroke-color: #ffffff;
+					height: calc(100% - 33px - 110px);
+					z-index: -1;
+					overflow: hidden;
+				}
+			}
+
 		}
-		&::before{
+		&--main::before {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -62,10 +75,10 @@
 		}
 		.section-title{
 			position: relative;
-		}
-		.swiper-button-hand{
-			top: 0;
-			transform: none;
+			.swiper-button-hand{
+				top: 0;
+				transform: none;
+			}
 		}
 		&__slider{
 			margin-left: -15px;
@@ -90,6 +103,9 @@
 			overflow: hidden;
 			background-color: $danger;
 
+		}
+		&--page &__item{
+			height: rem(265);
 		}
 		&__date{
 			font-size: rem(17);

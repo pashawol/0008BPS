@@ -75,7 +75,7 @@ $theme-color-interval: 8% !default;
 $min-contrast-ratio: 3 !default;
 
 // Customize the light and dark text colors for use in our color contrast function.
-$color-contrast-dark: $gray-900 !default;
+$color-contrast-dark: #000 !default;
 $color-contrast-light: $white !default;
  
 // Characters which are escaped by the escape-svg function
@@ -410,7 +410,7 @@ $table-variants: ("primary": color-level($primary, $table-bg-level),
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-padding-y: .875rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-x: 1.75rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
@@ -515,7 +515,7 @@ $input-border-color: #fff !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
-$input-border-radius: rem(90) !default;
+$input-border-radius: rem(25) !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
