@@ -35,6 +35,11 @@
 			@include mt;
 			opacity: 0;
 		}
+		&--contact{
+			&::after{
+				display: none;
+			}
+		}
 		&:hover{
 			&::after{
 				opacity: 1;

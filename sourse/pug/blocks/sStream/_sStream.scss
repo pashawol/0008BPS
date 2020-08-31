@@ -222,5 +222,10 @@
 	padding: 0;
 	.icon{
 		font-size: rem(24);
+		&-feather_send{
+			fill: transparent;
+			stroke: currentColor;
+			stroke-width: rem(2);
+		}
 	}
 }

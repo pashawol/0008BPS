@@ -64,26 +64,24 @@ mixin sMembers10()
 				mixin item(i,t)
 					.col-lg-3.col-sm-6
 						+e.item
-							+e.img-wrap.bg-wrap
+							+e.img-wrap--contact.bg-wrap
 								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
-								+e.DIV.img-inner
-									+e.DIV.btn(href="#").text-white
-										+e.DIV.icon-wrap
-											+icon("comment")
-										+e.DIV.btn-text.text-white Написать <br> сообщение 
+								//- +e.DIV.img-inner
+								//- 	+e.DIV.btn(href="#").text-white
+								//- 		+e.DIV.icon-wrap
+								//- 			+icon("comment")
+								//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
 									//- +e.DIV.btn-text
 									//- 	a(href="#").text-white Открыть биографию
 							+e.DIV.title
 								a(href="#")= t
-							+e.DIV.text Управляющий партнер
-								br
-								| ООО “Моршанский
-								br
-								| банк”
+							+e.DIV.text Управляющий партнер 
 							+e.DIV.text
-								a.text-body(href="tel:123456789") +123 456 78 99
+								a(href="mailto:manakova@skbkontur.ru") manakova@skbkontur.ru
 							+e.DIV.text
-								a.text-body(href="mailto:manakova@skbkontur.ru") manakova@skbkontur.ru
+								a(href="tel:123456789") +123 456 78 99
+							+e.DIV.text
+								a(href="№")  Написать  сообщение 
 
 					// /.col-xl-3.col-lg-4.col-sm-6
 				+item('1','Виктория Моршанская')
