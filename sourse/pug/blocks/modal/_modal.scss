@@ -3,6 +3,14 @@
 	width: 100%;
 	position: relative;
 	max-width: 485px;
+	&--lg{
+		
+		max-width: 1200px;
+		.form-wrap--border{
+			padding: 0;
+			border: none;
+		}
+	}
 	border-radius: rem(20);
 	background-color: $body-bg;
 	@include media-breakpoint-up(xl) {

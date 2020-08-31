@@ -238,6 +238,103 @@
 				</form>
 			</div>
 		</div>
+		<!-- #modal-call -->
+		<div class="modal-win modal-win--lg" id="modal-edit" style="display: none">
+			<div class="form-wrap form-wrap form-wrap--border">
+				<form action="/file-upload" enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Электронный адрес</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Город </span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Компания</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Должность</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="input-title">Повторите пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<label class="dropzone-wrapper d-block">
+								<div class="dropzone" action="/file-upload">
+									<div id="dropzone">
+										<div class="dropzone__prev-wrap">
+											<svg class="icon icon-photo ">
+												<use xlink:href="img/svg/sprite.svg#photo"></use>
+											</svg><span class="strong">Ваше фото</span>
+											<div class="dropzone__text"> Формат&nbsp;3:4, jpeg, jpg png не&nbsp;более 1&nbsp;mb
+											</div>
+										</div>
+										<div class="fallback">
+											<input name="file" type="file" multiple=""/>
+										</div>
+									</div>
+								</div>
+								<div class="form-wrap__file">Выбрать фото
+								</div>
+							</label>
+						</div>
+						<div class="col-lg-6 mb-4">
+							<button class="btn btn-primary w-100" type="submit">Сохранить</button>
+						</div>
+						<div class="col-lg-6">
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Я&nbsp;даю согласие на&nbsp;<a href="#">обработку персональных данных</a> и получение информационных сообщений от&nbsp;компании СКБ Контур</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Я&nbsp;принимаю условия <a href="#">договора на&nbsp;оказание услуг по&nbsp;проведению семинаров/вебинаров</a></span>
+							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
