@@ -195,7 +195,11 @@
 	font-size: rem(12);
 	opacity: 0.5;
 }
-
+.public-chat-pinned{
+ 
+	border-bottom: 1px solid rgba($color: #515152, $alpha: .1);
+	padding-bottom: .5rem;
+}
 .public-chat-form{
 	display: flex;
 	padding-top: 0.5rem;

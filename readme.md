@@ -14,3 +14,5 @@
 1. <https://pashawol.github.io/0008BPS/public/08-networking.html>
 1. <https://pashawol.github.io/0008BPS/public/10-contact.html>
 1. <https://pashawol.github.io/0008BPS/public/05-live.html>
+1. <https://pashawol.github.io/0008BPS/public/11-hobbyСhats.html>
+1. <https://pashawol.github.io/0008BPS/public/11-hobbyСhats-chat.html>
