@@ -214,15 +214,16 @@
 
 }
 .public-chat-form-input{
-	@extend .form-control;
-	height: initial;
-	min-height: 1px;
+	// @extend .form-control;
+	// height: initial;
+	// min-height: 1px;
 	flex-grow: 1;
 	border: none;
 	margin: 0;
 	padding: rem(5) rem(5);
 	border-radius: 0;
-	box-shadow: none !important;
+	// box-shadow: none !important;
+	width: 100%;
 }
 
 .public-chat-form-btn{
