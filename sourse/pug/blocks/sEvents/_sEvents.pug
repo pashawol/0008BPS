@@ -2,7 +2,9 @@ mixin sEvents()
 	// start sEvents
 	+b.sEvents.section#sEvents&attributes(attributes)
 		.container
-			
+				
+				+e.btn.btn-primary(href="#") 
+					+icon('icon-print')
 				mixin item(d,t)
 					+e.item
 						.row

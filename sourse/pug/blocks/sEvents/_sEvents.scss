@@ -4,7 +4,22 @@
 
 	padding-top: 20px;
 	padding-bottom: 52px;
-
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		padding: 0;
+		border-radius: 50%; 
+		width: rem(40);
+		height: rem(40);
+		margin-bottom: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		.icon{
+			font-size: rem(20);
+		}
+	}
 	&__item{
 		background-color: $white;
 		margin-bottom: 17px;
