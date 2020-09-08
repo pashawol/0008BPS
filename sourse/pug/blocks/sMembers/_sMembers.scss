@@ -24,6 +24,9 @@
 		margin-bottom: rem(20);
 		border-radius: 15px;
 		overflow: hidden; 
+		img{
+			object-position: top;
+		}
 		&::after{
 			content: '';
 			position: absolute;
