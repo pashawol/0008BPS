@@ -11,7 +11,7 @@ mixin sNetworking()
 			.row
 				mixin item(i,t)
 					+e.col.col-sm-4
-						+e.item(href="#")
+						+e.item(href="#modal-reg").link-modal
 							+e.icon-wrap
 								img(src=`img/svg/sNetworking-i-${i}.svg` loading="lazy", alt="")
 							+e.title= t
